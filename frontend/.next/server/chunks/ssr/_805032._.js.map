@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/margaret/modal-queue-map/frontend/app/page.jsx"],"sourcesContent":["import Image from \"next/image\"\nimport Heatmap from \"./components/heatmap\"\n\nsample_data = [\n  {\n      \"resource_type\": \"H100\",\n      \"time\": 1,\n      \"value\": 0.2\n  },\n  {\n      \"resource_type\": \"H100\",\n      \"time\": 2,\n      \"value\": 2\n  },\n  {\n      \"resource_type\": \"H100\",\n      \"time\": 3,\n      \"value\": 0.3\n  },\n  {\n      \"resource_type\": \"A100\",\n      \"time\": 1,\n      \"value\": 0.1\n  },\n  {\n      \"resource_type\": \"A100\",\n      \"time\": 2,\n      \"value\": 1.3\n  },\n  {\n      \"resource_type\": \"A100\",\n      \"time\": 3,\n      \"value\": 1.4\n  },\n]\n\nexport default function Home() {\n  return (\n    <main>\n      <h1>Queue Map</h1>\n      <Heatmap\n        width={1000}\n        height={1000}\n        data={sample_data}\n      />\n    </main>\n  );\n}"],"names":[],"mappings":";;;;AAAA;;;;;;;;;AAGA,cAAc;IACZ;QACI,iBAAiB;QACjB,QAAQ;QACR,SAAS;IACb;IACA;QACI,iBAAiB;QACjB,QAAQ;QACR,SAAS;IACb;IACA;QACI,iBAAiB;QACjB,QAAQ;QACR,SAAS;IACb;IACA;QACI,iBAAiB;QACjB,QAAQ;QACR,SAAS;IACb;IACA;QACI,iBAAiB;QACjB,QAAQ;QACR,SAAS;IACb;IACA;QACI,iBAAiB;QACjB,QAAQ;QACR,SAAS;IACb;CACD;AAEc,SAAS;IACtB,qBACE,8OAAC;;0BACC,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;gBACC,OAAO;gBACP,QAAQ;gBACR,MAAM;;;;;;;;;;;;AAId"}},
-    {"offset": {"line": 78, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 89, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
-    {"offset": {"line": 89, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

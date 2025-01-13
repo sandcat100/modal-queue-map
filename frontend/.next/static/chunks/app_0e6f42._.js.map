@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/margaret/modal-queue-map/frontend/app/ConvexClientProvider.jsx"],"sourcesContent":["\"use client\";\n\nimport { ConvexProvider, ConvexReactClient, ConvexReactClientOptions} from \"convex/react\";\nimport { ReactNode } from \"react\";\n\nconst convex = new ConvexReactClient(\"https://groovy-buffalo-393.convex.cloud\", {verbose: true});\n\nexport function ConvexClientProvider({ children }) {\n  return <ConvexProvider client={convex}>{children}</ConvexProvider>;\n}"],"names":[],"mappings":";;;;AAEA;AACA;AADA;AAFA;;;;AAKA,MAAM,SAAS,IAAI,2JAAA,CAAA,oBAAiB,CAAC,2CAA2C;IAAC,SAAS;AAAI;AAEvF,SAAS,qBAAqB,EAAE,QAAQ,EAAE;IAC/C,qBAAO,6LAAC,2JAAA,CAAA,iBAAc;QAAC,QAAQ;kBAAS;;;;;;AAC1C;KAFgB"}},
-    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
