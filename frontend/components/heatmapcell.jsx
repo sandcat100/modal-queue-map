@@ -1,11 +1,5 @@
-import { useState, useRef, useEffect } from "react"
+import { useRef, useEffect } from "react"
 import * as d3 from "d3"
-import ColorLegend from "../components/colorscale"
-
-// const colorScale = d3
-//   .scaleSequential()
-//   .interpolator(d3.interpolateRdYlGn)
-//   .domain([16, 0]);
 
 export default function HeatmapCell({x, y, width, height, colorScale, data, isActive, handleHover}) {
     const componentRef = useRef(null)

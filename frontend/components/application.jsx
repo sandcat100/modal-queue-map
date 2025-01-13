@@ -1,6 +1,4 @@
 import { useState, useRef, useEffect } from "react"
-import { useQuery } from "convex/react";
-import { api } from "../convex/_generated/api";
 import * as d3 from "d3";
 
 import Heatmap from "../components/heatmap"
@@ -10,8 +8,6 @@ const colorScale = d3
   .scaleSequential()
   .interpolator(d3.interpolateRdYlGn)
   .domain([18, 0]);
-
-const GPU_TYPES = ["H100", "A100-80GB", "A100", "L40S", "A10G", "L4", "T4"]
 
 export default function Application({data}) {
   const [activeIndex, setActiveIndex] = useState(null);

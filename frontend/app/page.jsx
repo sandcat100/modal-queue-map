@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
 import { useQuery } from "convex/react";
 import { api } from "../convex/_generated/api";
-import * as d3 from "d3";
 
 import Application from "../components/application"
 
@@ -29,7 +28,7 @@ export default function Home() {
   }
 
   // Get rid of old time markers, we only want to show what can fit the page
-  const time_markers_sliced = time_markers.slice(-40)
+  const time_markers_sliced = time_markers.slice(-41)
 
   for (const time_marker of time_markers_sliced) {
     queue_times_bucket_to_gpu_samples[time_marker] = {}
