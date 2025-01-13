@@ -77,6 +77,7 @@ export default function Home() {
   
   return (
     <main>
+      <div className="github-link-div"><a href="https://github.com/sandcat100/modal-queue-map" target="_blank" rel="noopener noreferrer">[github]</a></div>
       <h1>How quickly can you get a GPU on Modal?</h1>
       <h2>Median TTYCR (time to your code running) sampled on each of our GPU types 🏎️</h2>
       <div className="time-selector-div">
