@@ -7,7 +7,7 @@ import ColorLegend from "../components/colorscale"
 const colorScale = d3
   .scaleSequential()
   .interpolator(d3.interpolateRdYlGn)
-  .domain([18, 0]);
+  .domain([20, 0]);
 
 export default function Application({data}) {
   const [activeIndex, setActiveIndex] = useState(null);
