@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  title: 'Modal Queue Times',
   openGraph: {
     images: [{
       url: '/og.png',  // Path relative to the public directory
