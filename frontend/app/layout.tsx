@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ConvexClientProvider } from "./ConvexClientProvider";
+import { Metadata } from 'next'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+  openGraph: {
+    images: [{
+      url: '/og.png',  // Path relative to the public directory
+    }],
+  },
+}
 
 export default function RootLayout({
   children,
