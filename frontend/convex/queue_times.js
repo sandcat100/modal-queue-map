@@ -3,7 +3,7 @@ import { v } from "convex/values";
 
 export const get = query({
   handler: async ({ db }) => {
-    return await db.query("queue_times").collect();
+    return await db.query("queue_times").order("desc").take(8000);
   },
 });
 
