@@ -1,5 +1,6 @@
 import modal
 import time
+import os
 from datetime import datetime
 
 app = modal.App("modal-queue-map")
@@ -14,7 +15,7 @@ def send_times(sample):
     client = ConvexClient("https://groovy-buffalo-393.convex.cloud")
     client.mutation("queue_times:put", sample)
 
-@app.cls(container_idle_timeout = 2)
+@app.cls(container_idle_timeout = 2, secrets=[modal.Secret.from_name("convex-secret")])
 class QueueTimeWatch:
 
     @modal.method()
@@ -25,9 +26,10 @@ class QueueTimeWatch:
         sample = {
             "time": rounded_time.timestamp(),
             "resource_type": gpu_type.upper(),
-            "value": queue_time
+            "value": queue_time,
         }
         print(sample)
+        sample["apiKey"] = os.environ["CONVEX_TOKEN"]
         send_times.remote(sample)
 
 def round_time(dt):
