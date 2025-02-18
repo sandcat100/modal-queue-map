@@ -1,4 +1,5 @@
 import { mutation, query } from "./_generated/server";
+import { customMutation } from "convex-helpers/server/customFunctions";
 import { v } from "convex/values";
 
 export const get = query({
@@ -7,7 +8,15 @@ export const get = query({
   },
 });
 
-export const put = mutation({
+const apiMutation = customMutation(mutation, {
+  args: { apiKey: v.string() },
+  input: async (ctx, { apiKey }) => {
+    if (apiKey !== process.env.CONVEX_API_TOKEN) throw new Error("Invalid API key");
+    return { ctx: {}, args: {} };
+  },
+});
+
+export const put = apiMutation({
   args: {
     time: v.number(),
     resource_type: v.string(),
@@ -21,4 +30,3 @@ export const put = mutation({
     });
   },
 });
-
