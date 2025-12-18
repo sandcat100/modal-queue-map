@@ -9,7 +9,7 @@ export default function Heatmap(props) {
     const boundsWidth = props.width - MARGIN.right - MARGIN.left;
     const boundsHeight = props.height - MARGIN.top - MARGIN.bottom;
 
-    const yAxisElements = ["H100", "A100-80GB", "A100", "L40S", "A10G", "L4", "T4"]    
+    const yAxisElements = ["B200", "H200", "H100", "A100-80GB", "A100", "L40S", "A10G", "L4", "T4"]    
     const xAxisElements = useMemo(() => [...new Set(props.data.map((d) => d.time))], [props.data])
 
     const yScale = useMemo(() => {

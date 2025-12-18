@@ -29,7 +29,7 @@ export default function Application({data}) {
     <div className="heatmap-container">
     <Heatmap
         width={1600}
-        height={400}
+        height={500}
         data={data}
         colorScale={colorScale}
         activeIndex={activeIndex}

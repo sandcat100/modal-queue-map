@@ -6,7 +6,7 @@ from datetime import datetime
 app = modal.App("modal-queue-map")
 convex_image = modal.Image.debian_slim().pip_install("convex")
 
-GPU_TYPES = ["h100", "a100-80gb", "a100", "l40s", "a10g", "l4", "t4"]
+GPU_TYPES = ["b200", "h200", "h100", "a100-80gb", "a100", "l40s", "a10g", "l4", "t4"]
 
 @app.function(image=convex_image)  
 def send_times(sample):

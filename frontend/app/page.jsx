@@ -6,7 +6,7 @@ import { api } from "../convex/_generated/api";
 
 import Application from "../components/application"
 
-const GPU_TYPES = ["H100", "A100-80GB", "A100", "L40S", "A10G", "L4", "T4"]
+const GPU_TYPES = ["B200", "H200", "H100", "A100-80GB", "A100", "L40S", "A10G", "L4", "T4"]
 
 export default function Home() {
   const [hourGranularity, setHourGranularity] = useState(6);
